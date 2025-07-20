@@ -13,6 +13,20 @@ const GameBoardContainer = styled.div`
   gap: 2rem;
   height: 70vh;
   min-height: 500px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 65% 35%; /* Adjust percentages for tablet */
+    gap: 1rem; /* Reduce gap */
+    height: 60vh; /* Slightly reduce height on tablet */
+    min-height: 480px; /* Adjust min-height */
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 60% 40%; /* Adjust percentages for small mobile, giving more space to Recipe */
+    gap: 0.5rem; /* Further reduce gap */
+    height: 50vh; /* Further reduce height on small mobile */
+    min-height: 400px; /* Adjust min-height for small mobile */
+  }
 `;
 
 const KitchenArea = styled.div`
@@ -60,8 +74,22 @@ const GameMessage = styled(motion.div)`
   font-size: 1.5rem;
   font-weight: bold;
   color: #ff6b6b;
-  white-space: nowrap;
-`;
+  /* white-space: nowrap; // Remove this to allow text wrapping */
+
+  @media (max-width: 768px) {
+    top: 15px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    max-width: 90%; /* To prevent overflow on very small screens */
+    white-space: normal; /* Allow text to wrap */
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    top: 10px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }`;
 
 export const GameBoard = ({ level, recipe, levelData }) => {
   const [currentIngredientIndex, setCurrentIngredientIndex] = useState(0);

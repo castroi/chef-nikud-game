@@ -17,6 +17,15 @@ const GlobalStyle = styled.div`
   flex-direction: column;
   align-items: center;
   color: #333;
+
+  @media (max-width: 768px) {
+    font-size: 14px; /* Smaller base font size for mobile */
+    /* Add any other global mobile-specific styles here */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px; /* Even smaller base font size for small mobile */
+  }
 `;
 
 const Header = styled.header`
@@ -32,6 +41,20 @@ const Header = styled.header`
     font-size: 2.5rem;
     margin: 0;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 0; /* Slightly less padding on mobile */
+    h1 {
+      font-size: 1.8rem; /* Smaller font size for header on mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 0; /* Even less padding */
+    h1 {
+      font-size: 1.5rem; /* Even smaller font size for header */
+    }
+  }
 `;
 
 const GameContainer = styled.main`
@@ -43,6 +66,18 @@ const GameContainer = styled.main`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    width: 95%; /* Take up more width on smaller screens */
+    padding: 1rem; /* Reduced padding for mobile */
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 98%; /* Take up even more width */
+    padding: 0.8rem; /* Further reduced padding */
+    margin-bottom: 0.8rem;
+  }
 `;
 
 const LevelSelect = styled.div`
@@ -84,6 +119,36 @@ const LevelSelect = styled.div`
     &.active {
       background-color: #06d6a0;
       color: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.2rem; /* Smaller heading on mobile */
+      margin-bottom: 1rem;
+    }
+    .levels {
+      gap: 0.5rem; /* Smaller gap between buttons */
+    }
+    button {
+      width: 3rem; /* Smaller buttons on mobile */
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1rem; /* Even smaller heading on very small mobile */
+      margin-bottom: 0.8rem;
+    }
+    .levels {
+      gap: 0.3rem; /* Even smaller gap between buttons */
+    }
+    button {
+      width: 2.5rem; /* Even smaller buttons on very small mobile */
+      height: 2.5rem;
+      font-size: 1rem;
     }
   }
 `;

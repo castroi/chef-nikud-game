@@ -10,6 +10,14 @@ const RecipeContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.8rem;
+  }
 `;
 
 const RecipeTitle = styled.h2`
@@ -28,6 +36,24 @@ const RecipeTitle = styled.h2`
     height: 3px;
     background-color: #ffd166;
     border-radius: 3px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    &:after {
+      left: 20%;
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    &:after {
+      left: 15%;
+      width: 70%;
+    }
   }
 `;
 
@@ -61,11 +87,41 @@ const IngredientItem = styled(motion.li)`
     color: ${props => props.isActive ? '#ff6b6b' : 'inherit'};
     font-weight: ${props => props.isActive ? 'bold' : 'normal'};
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.8rem;
+    &:before {
+      margin-left: 8px;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem 0.6rem;
+    &:before {
+      margin-left: 6px;
+      font-size: 1rem;
+    }
+  }
 `;
 
 const IngredientEmoji = styled.span`
   font-size: 1.5rem;
   margin-left: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-left: 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-left: 6px;
+  }
 `;
 
 export const Recipe = ({ recipeName, ingredients, currentIngredient }) => {
