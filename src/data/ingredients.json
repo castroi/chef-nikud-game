@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "name": "בָּצָל",
+    "hebrewWithoutNikud": "בצל",
+    "nikud": "קמץ",
+    "image": "onion.png",
+    "alternativeNikud": [
+      {
+        "name": "בַּצַל",
+        "nikud": "פתח"
+      },
+      {
+        "name": "בֶּצֶל",
+        "nikud": "סגול"
+      },
+      {
+        "name": "בִּצְל",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "בוּצָל",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "גֶּזֶר",
+    "hebrewWithoutNikud": "גזר",
+    "nikud": "סגול",
+    "image": "carrot.png",
+    "alternativeNikud": [
+      {
+        "name": "גַּזַר",
+        "nikud": "פתח"
+      },
+      {
+        "name": "גֶּזֶר",
+        "nikud": "סגול"
+      },
+      {
+        "name": "גִּזְר",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "גוּזָר",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "תָּפוּחַ אֲדָמָה",
+    "hebrewWithoutNikud": "תפוח אדמה",
+    "nikud": "קמץ",
+    "image": "potato.png",
+    "alternativeNikud": [
+      {
+        "name": "תַּפוּחַ אַדַמַה",
+        "nikud": "פתח"
+      },
+      {
+        "name": "תֶּפוּחַ אֲדָמָה",
+        "nikud": "סגול"
+      },
+      {
+        "name": "תִּפְוּחַ אֲדָמָה",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "תוּפוּחַ אֲדָמָה",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "מֶלַח",
+    "hebrewWithoutNikud": "מלח",
+    "nikud": "סגול",
+    "image": "salt.png",
+    "alternativeNikud": [
+      {
+        "name": "מָלָח",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "מַלַח",
+        "nikud": "פתח"
+      },
+      {
+        "name": "מִלְח",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "מוּלָח",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "פִּלְפִּל",
+    "hebrewWithoutNikud": "פלפל",
+    "nikud": "חיריק",
+    "image": "pepper.png",
+    "alternativeNikud": [
+      {
+        "name": "פָּלְפָּל",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "פַּלְפַּל",
+        "nikud": "פתח"
+      },
+      {
+        "name": "פִּלְפִּל",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "פּוּלְפָּל",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "שֶׁמֶן",
+    "hebrewWithoutNikud": "שמן",
+    "nikud": "סגול",
+    "image": "oil.png",
+    "alternativeNikud": [
+      {
+        "name": "שָׁמָן",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "שַׁמַן",
+        "nikud": "פתח"
+      },
+      {
+        "name": "שִׁמְן",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "שׁוּמָן",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "עָגְבָנִיָּה",
+    "hebrewWithoutNikud": "עגבניה",
+    "nikud": "קמץ",
+    "image": "tomato.png",
+    "alternativeNikud": [
+      {
+        "name": "עַגְבַנִיַה",
+        "nikud": "פתח"
+      },
+      {
+        "name": "עֶגְבֶנִיֶה",
+        "nikud": "סגול"
+      },
+      {
+        "name": "עִגְבְנִיִה",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "עוּגְבָנִיָה",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "קֶמַח",
+    "hebrewWithoutNikud": "קמח",
+    "nikud": "סגול",
+    "image": "flour.png",
+    "alternativeNikud": [
+      {
+        "name": "קָמָח",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "קַמַח",
+        "nikud": "פתח"
+      },
+      {
+        "name": "קִמְח",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "קוּמָח",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "גְּבִינָה",
+    "hebrewWithoutNikud": "גבינה",
+    "nikud": "חיריק",
+    "image": "cheese.png",
+    "alternativeNikud": [
+      {
+        "name": "גְּבָנָה",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "גְּבֶנֶה",
+        "nikud": "סגול"
+      },
+      {
+        "name": "גְּבַנַה",
+        "nikud": "פתח"
+      },
+      {
+        "name": "גְּבוּנָה",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "זַיִת",
+    "hebrewWithoutNikud": "זית",
+    "nikud": "פתח",
+    "image": "olive.png",
+    "alternativeNikud": [
+      {
+        "name": "זָיִת",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "זֶיִת",
+        "nikud": "סגול"
+      },
+      {
+        "name": "זִיְת",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "זוּיִת",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "סֻכָּר",
+    "hebrewWithoutNikud": "סכר",
+    "nikud": "קובוץ",
+    "image": "sugar.png",
+    "alternativeNikud": [
+      {
+        "name": "סָכָּר",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "סַכַּר",
+        "nikud": "פתח"
+      },
+      {
+        "name": "סִכְּר",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "סֶכֶּר",
+        "nikud": "סגול"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "בֵּיצָה",
+    "hebrewWithoutNikud": "ביצה",
+    "nikud": "צירה",
+    "image": "egg.png",
+    "alternativeNikud": [
+      {
+        "name": "בָּיצָה",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "בַּיְצַה",
+        "nikud": "פתח"
+      },
+      {
+        "name": "בִּיְצִה",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "בּוּיְצָה",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "מַיִם",
+    "hebrewWithoutNikud": "מים",
+    "nikud": "פתח",
+    "image": "water.png",
+    "alternativeNikud": [
+      {
+        "name": "מָיִם",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "מֶיִם",
+        "nikud": "סגול"
+      },
+      {
+        "name": "מִיְם",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "מוּיִם",
+        "nikud": "שורוק"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "שְׁמָרִים",
+    "hebrewWithoutNikud": "שמרים",
+    "nikud": "שווא",
+    "image": "yeast.png",
+    "alternativeNikud": [
+      {
+        "name": "שָׁמָרִים",
+        "nikud": "קמץ"
+      },
+      {
+        "name": "שֶׁמֶרִים",
+        "nikud": "סגול"
+      },
+      {
+        "name": "שִׁמְרִים",
+        "nikud": "חיריק"
+      },
+      {
+        "name": "שׁוּמָרִים",
+        "nikud": "שורוק"
+      }
+    ]
+  }
+]

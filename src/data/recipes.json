@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "name": "מרק ירקות בסיסי",
+    "description": "מרק ירקות פשוט וטעים",
+    "level": 1,
+    "ingredients": [
+      {
+        "name": "בָּצָל",
+        "image": "onion.png",
+        "correctNikud": "קמץ",
+        "alternatives": ["בַּצַל", "בֶּצֶל", "בִּצְל", "בוּצָל"]
+      },
+      {
+        "name": "גֶּזֶר",
+        "image": "carrot.png",
+        "correctNikud": " סגול",
+        "alternatives": ["גַּזַר", "גֶּזֶר", "גִּזְר", "גוּזָר"]
+      },
+      {
+        "name": "תָּפוּחַ אֲדָמָה",
+        "image": "potato.png",
+        "correctNikud": "קמץ",
+        "alternatives": ["תַּפוּחַ אַדַמַה", "תֶּפוּחַ אֲדָמָה", "תִּפְוּחַ אֲדָמָה", "תוּפוּחַ אֲדָמָה"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "סלט ירקות",
+    "description": "סלט ירקות ישראלי קלאסי",
+    "level": 2,
+    "ingredients": [
+      {
+        "name": "מֶלַח",
+        "image": "salt.png",
+        "correctNikud": "סגול",
+        "alternatives": ["מָלָח", "מַלַח", "מִלְח", "מוּלָח"]
+      },
+      {
+        "name": "פַּלְפַּל",
+        "image": "pepper.png",
+        "correctNikud": "חיריק",
+        "alternatives": ["פָּלְפָּל", "פַּלְפַּל", "פִּלְפִּל", "פּוּלְפָּל"]
+      },
+      {
+        "name": "שֶׁמֶן",
+        "image": "oil.png",
+        "correctNikud": "סגול",
+        "alternatives": ["שָׁמָן", "שַׁמַן", "שִׁמְן", "שׁוּמָן"]
+      },
+      {
+        "name": "עָגְבָנִיָּה",
+        "image": "tomato.png",
+        "correctNikud": "קמץ",
+        "alternatives": ["עַגְבַנִיַה", "עֶגְבֶנִיֶה", "עִגְבְנִיִה", "עוּגְבָנִיָה"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "פיצה ביתית",
+    "description": "פיצה טעימה להכנה בבית",
+    "level": 3,
+    "ingredients": [
+      {
+        "name": "קֶמַח",
+        "image": "flour.png",
+        "correctNikud": "סגול",
+        "alternatives": ["קָמָח", "קַמַח", "קִמְח", "קוּמָח"]
+      },
+      {
+        "name": "גְּבִינָה",
+        "image": "cheese.png",
+        "correctNikud": "חיריק",
+        "alternatives": ["גְּבָנָה", "גְּבֶנֶה", "גְּבַנַה", "גְּבוּנָה"]
+      },
+      {
+        "name": "זַיִת",
+        "image": "olive.png",
+        "correctNikud": "פתח",
+        "alternatives": ["זָיִת", "זֶיִת", "זִיְת", "זוּיִת"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "עוגיות שוקולד צ'יפס",
+    "description": "עוגיות שוקולד צ'יפס טעימות",
+    "level": 4,
+    "ingredients": [
+      {
+        "name": "קָמֶח",
+        "image": "flour.png",
+        "correctNikud": "קמץ",
+        "alternatives": ["קַמֶח", "קֶמֶח", "קִמְח", "קוּמֶח"]
+      },
+      {
+        "name": "סֻכָּר",
+        "image": "sugar.png",
+        "correctNikud": "קובוץ",
+        "alternatives": ["סָכָּר", "סַכַּר", "סִכְּר", "סֶכֶּר"]
+      },
+      {
+        "name": "בֵּיצָה",
+        "image": "egg.png",
+        "correctNikud": "צירה",
+        "alternatives": ["בָּיצָה", "בַּיְצַה", "בִּיְצִה", "בּוּיְצָה"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "לחם הבית",
+    "description": "לחם ביתי ריחני",
+    "level": 5,
+    "ingredients": [
+      {
+        "name": "קֶמַח",
+        "image": "flour.png",
+        "correctNikud": "סגול",
+        "alternatives": ["קָמָח", "קַמַח", "קִמְח", "קוּמָח"]
+      },
+      {
+        "name": "שֶׁמֶן",
+        "image": "oil.png",
+        "correctNikud": "סגול",
+        "alternatives": ["שָׁמָן", "שַׁמַן", "שִׁמְן", "שׁוּמָן"]
+      },
+      {
+        "name": "מַיִם",
+        "image": "water.png",
+        "correctNikud": "פתח",
+        "alternatives": ["מָיִם", "מֶיִם", "מִיְם", "מוּיִם"]
+      },
+      {
+        "name": "שְׁמָרִים",
+        "image": "yeast.png",
+        "correctNikud": "שווא",
+        "alternatives": ["שָׁמָרִים", "שֶׁמֶרִים", "שִׁמְרִים", "שׁוּמָרִים"]
+      }
+    ]
+  }
+]
