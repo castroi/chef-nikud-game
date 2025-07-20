@@ -38,16 +38,16 @@
 התקנת הפרויקט:
 
 ```bash
-# שכפול המאגר
-git clone https://github.com/ castroi/chef-nikud-game.git
+# Cloning the repository
+git clone https://github.com/castroi/chef-nikud-game.git
 
-# מעבר לספריית הפרויקט
+# Moving to the project directory
 cd chef-nikud-game
 
-# התקנת התלויות
+# Installing dependencies
 npm install
 
-# הפעלת שרת הפיתוח
+# Starting the development server
 npm start
 ```
 
