@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
+import emojiMap from '../../../src/data/emojis.json';
 
 const IngredientContainer = styled(motion.div)`
   display: flex;
@@ -69,25 +70,10 @@ export const Ingredient = ({ ingredient, onSelect, onDragEnd, isSelected }) => {
     onDragEnd();
   };
   
+
+
   // Choose the appropriate emoji for the ingredient
   const getEmoji = (imageName) => {
-    const emojiMap = {
-      'onion.png': '🧅',
-      'carrot.png': '🥕',
-      'potato.png': '🥔',
-      'salt.png': '🧂',
-      'pepper.png': '🌶️',
-      'oil.png': '🫗',
-      'tomato.png': '🍅',
-      'flour.png': '🌾',
-      'cheese.png': '🧀',
-      'olive.png': '🫒',
-      'sugar.png': '🌇',
-      'egg.png': '🥚',
-      'water.png': '💧',
-      'yeast.png': '🍞'
-    };
-    
     return emojiMap[imageName] || '🍲';
   };
   

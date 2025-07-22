@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import emojiMap from '../../data/emojis.json';
 
 const RecipeContainer = styled.div`
   background-color: #fff4e0;
@@ -124,25 +125,8 @@ const IngredientEmoji = styled.span`
   }
 `;
 
+
 export const Recipe = ({ recipeName, ingredients, currentIngredient }) => {
-  // Mapping of image filenames to emojis
-  const emojiMap = {
-    'onion.png': '🧅',
-    'carrot.png': '🥕',
-    'potato.png': '🥔',
-    'salt.png': '🧂',
-    'pepper.png': '🌶️',
-    'oil.png': '🫗',
-    'tomato.png': '🍅',
-    'flour.png': '🌾',
-    'cheese.png': '🧀',
-    'olive.png': '🫒',
-    'sugar.png': '🌇',
-    'egg.png': '🥚',
-    'water.png': '💧',
-    'yeast.png': '🍞'
-  };
-  
   return (
     <RecipeContainer>
       <RecipeTitle>{recipeName}</RecipeTitle>
