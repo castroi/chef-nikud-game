@@ -197,6 +197,10 @@ function App() {
           />
         )}
       </GameContainer>
+
+      <footer>
+        <p>שף הניקוד - משחק לתרגול ניקוד בעברית | כל הזכויות שמורות © {new Date().getFullYear()}</p>
+      </footer>
     </GlobalStyle>
   );
 }
