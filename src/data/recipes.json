@@ -35,19 +35,19 @@
         "name": "מֶלַח",
         "image": "salt.png",
         "correctNikud": "סגול",
-        "alternatives": ["מָלָח", "מַלַח", "מִלְח", "מוּלָח"]
+        "alternatives": ["מָלָח", "מִלְח", "מוּלָח"]
       },
       {
-        "name": "פַּלְפַּל",
+        "name": "פִּלְפֵּל",
         "image": "pepper.png",
         "correctNikud": "חיריק",
-        "alternatives": ["פָּלְפָּל", "פַּלְפַּל", "פִּלְפִּל", "פּוּלְפָּל"]
+        "alternatives": ["פָּלְפָּל", "פִּלְפִּל", "פּוּלְפָּל"]
       },
       {
         "name": "שֶׁמֶן",
         "image": "oil.png",
         "correctNikud": "סגול",
-        "alternatives": ["שָׁמָן", "שַׁמַן", "שִׁמְן", "שׁוּמָן"]
+        "alternatives": ["שָׁמָן", "שִׁמְן", "שׁוּמָן"]
       },
       {
         "name": "עָגְבָנִיָּה",
@@ -67,13 +67,13 @@
         "name": "קֶמַח",
         "image": "flour.png",
         "correctNikud": "סגול",
-        "alternatives": ["קָמָח", "קַמַח", "קִמְח", "קוּמָח"]
+        "alternatives": ["קָמָח", "קִמַח", "קוּמָח"]
       },
       {
         "name": "גְּבִינָה",
         "image": "cheese.png",
         "correctNikud": "חיריק",
-        "alternatives": ["גְּבָנָה", "גְּבֶנֶה", "גְּבַנַה", "גְּבוּנָה"]
+        "alternatives": ["גְּבָנָה", "גְּבֶנֶה", "גְּבוּנָה"]
       },
       {
         "name": "זַיִת",
@@ -93,19 +93,19 @@
         "name": "קֶמַח",
         "image": "flour.png",
         "correctNikud": "סגול",
-        "alternatives": ["קָמָח", "קַמַח", "קִמְח", "קוּמָח"]
+        "alternatives": ["קַמַח", "קִמַח", "קוּמָח"]
       },
       {
         "name": "סֻכָּר",
         "image": "sugar.png",
         "correctNikud": "קובוץ",
-        "alternatives": ["סָכָּר", "סַכַּר", "סִכְּר", "סֶכֶּר"]
+        "alternatives": ["סָכָּר", "סִכְּר", "סֶכֶּר"]
       },
       {
         "name": "בֵּיצָה",
         "image": "egg.png",
         "correctNikud": "צירה",
-        "alternatives": ["בָּיצָה", "בַּיְצַה", "בִּיְצִה", "בּוּיְצָה"]
+        "alternatives": ["בָּיצָה", "בַּיְצַה", "בּוּיְצָה"]
       }
     ]
   },
@@ -119,13 +119,13 @@
         "name": "קֶמַח",
         "image": "flour.png",
         "correctNikud": "סגול",
-        "alternatives": ["קָמָח", "קַמַח", "קִמְח", "קוּמָח"]
+        "alternatives": ["קַמַח", "קִמְח", "קוּמָח"]
       },
       {
         "name": "שֶׁמֶן",
         "image": "oil.png",
         "correctNikud": "סגול",
-        "alternatives": ["שָׁמָן", "שַׁמַן", "שִׁמְן", "שׁוּמָן"]
+        "alternatives": ["שָׁמָן", "שַׁמַן", "שׁוּמָן"]
       },
       {
         "name": "מַיִם",
@@ -137,7 +137,7 @@
         "name": "שְׁמָרִים",
         "image": "yeast.png",
         "correctNikud": "שווא",
-        "alternatives": ["שָׁמָרִים", "שֶׁמֶרִים", "שִׁמְרִים", "שׁוּמָרִים"]
+        "alternatives": ["שָׁמָרִים", "שִׁמְרִים", "שׁוּמָרִים"]
       }
     ]
   }
