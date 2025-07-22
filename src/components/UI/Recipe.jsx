@@ -68,13 +68,12 @@ const IngredientItem = styled(motion.li)`
   display: flex;
   align-items: center;
   margin-bottom: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Slightly larger base */
   padding: 0.8rem 1rem;
   border-radius: 8px;
   background-color: ${props => props.isActive ? '#ffd1663b' : 'transparent'};
   
   &:before {
-    content: '•';
     margin-left: 10px;
     color: #ff6b6b;
     font-size: 1.5rem;
@@ -90,7 +89,7 @@ const IngredientItem = styled(motion.li)`
   }
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     padding: 0.6rem 0.8rem;
     &:before {
@@ -100,7 +99,7 @@ const IngredientItem = styled(motion.li)`
   }
 
   @media (max-width: 480px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
     padding: 0.5rem 0.6rem;
     &:before {
@@ -111,16 +110,16 @@ const IngredientItem = styled(motion.li)`
 `;
 
 const IngredientEmoji = styled.span`
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Slightly larger base emoji */
   margin-left: 10px;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-left: 8px;
   }
 
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-left: 6px;
   }
 `;

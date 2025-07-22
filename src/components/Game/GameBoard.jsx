@@ -7,25 +7,33 @@ import { Ingredient } from './Ingredient';
 import { Recipe } from '../UI/Recipe';
 import { ProgressBar } from '../UI/ProgressBar';
 
+const MainLayoutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  padding: 1rem; /* Add some overall padding */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+
+  @media (max-width: 768px) {
+    padding: 0.5rem; /* Less padding on smaller screens */
+  }
+`;
+
 const GameBoardContainer = styled.div`
   display: grid;
   grid-template-columns: 70% 30%;
   gap: 2rem;
-  height: 70vh;
-  min-height: 500px;
+  flex-grow: 1; /* Allow GameBoardContainer to take available vertical space within MainLayoutContainer */
+  margin-bottom: 1rem; /* Space between GameBoard and Ingredients */
 
   @media (max-width: 768px) {
-    grid-template-columns: 65% 35%; /* Adjust percentages for tablet */
-    gap: 1rem; /* Reduce gap */
-    height: 60vh; /* Slightly reduce height on tablet */
-    min-height: 480px; /* Adjust min-height */
+    grid-template-columns: 60% 40%; /* Adjust for tablet - keeping side by side */
+    gap: 1rem;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 60% 40%; /* Adjust percentages for small mobile, giving more space to Recipe */
-    gap: 0.5rem; /* Further reduce gap */
-    height: 50vh; /* Further reduce height on small mobile */
-    min-height: 400px; /* Adjust min-height for small mobile */
+    grid-template-columns: 55% 45%; /* Further adjust for mobile - keeping side by side */
+    gap: 0.5rem;
   }
 `;
 
@@ -71,25 +79,27 @@ const GameMessage = styled(motion.div)`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Base font size */
   font-weight: bold;
   color: #ff6b6b;
-  /* white-space: nowrap; // Remove this to allow text wrapping */
+  white-space: nowrap; /* Keep on one line for larger screens */
 
   @media (max-width: 768px) {
     top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly smaller for tablets */
     padding: 0.8rem 1.5rem;
-    max-width: 90%; /* To prevent overflow on very small screens */
-    white-space: normal; /* Allow text to wrap */
+    max-width: 95%; /* Adjust max-width to allow more space for text */
+    white-space: normal; /* Allow text to wrap on smaller screens */
     text-align: center;
   }
 
   @media (max-width: 480px) {
     top: 10px;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }`;
+    font-size: 0.8rem; /* Smaller font on mobile for better fit */
+    padding: 0.4rem 0.8rem; /* Reduced padding */
+    max-width: 98%; /* More aggressive max-width for small phones */
+  }
+`;
 
 export const GameBoard = ({ level, recipe, levelData }) => {
   const [currentIngredientIndex, setCurrentIngredientIndex] = useState(0);
@@ -176,7 +186,7 @@ export const GameBoard = ({ level, recipe, levelData }) => {
   };
   
   return (
-    <>
+    <MainLayoutContainer>
       <GameBoardContainer>
         <KitchenArea>
           <GameMessage
@@ -224,6 +234,6 @@ export const GameBoard = ({ level, recipe, levelData }) => {
           />
         ))}
       </IngredientsContainer>
-    </>
+    </MainLayoutContainer>
   );
 };
