@@ -60,11 +60,14 @@ const DropZone = styled(motion.div)`
   height: 200px;
   border-radius: 50%;
   z-index: 2;
+  /* Visual feedback for drag over */
+  border: ${props => (props.$isDragOver ? '3px dashed #fff' : '3px dashed transparent')}; 
+  transition: border 0.2s ease-in-out;
 `;
 
-export const Pot = ({ onDrop }) => {
+export const Pot = ({ onDrop, selectedIngredient }) => { // Added selectedIngredient prop
   const [isBoiling, setIsBoiling] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // Can be renamed to isDragOver for clarity
 
   // Animation for cooking steam
   const steamVariants = {
@@ -83,17 +86,24 @@ export const Pot = ({ onDrop }) => {
     },
   };
 
-  const handleDragEnter = () => {
-    setIsHovered(true);
+  const handleDragOver = (e) => {
+    e.preventDefault(); // Necessary to allow dropping
+    if (!isHovered) {
+      setIsHovered(true);
+    }
   };
 
   const handleDragLeave = () => {
     setIsHovered(false);
   };
 
-  const handleDrop = () => {
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setIsHovered(false);
     setIsBoiling(true);
-    onDrop();
+        if (selectedIngredient) {
+      onDrop(selectedIngredient); // Pass the selected ingredient to onDrop
+    }
     
     // After boiling animation, return to normal state
     setTimeout(() => {
@@ -130,9 +140,10 @@ export const Pot = ({ onDrop }) => {
         }}
       />
       <DropZone
-        onHoverStart={handleDragEnter}
-        onHoverEnd={handleDragLeave}
-        onTap={handleDrop}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        $isDragOver={isHovered} // Pass prop for styled component
       />
     </PotContainer>
   );

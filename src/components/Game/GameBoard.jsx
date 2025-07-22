@@ -139,11 +139,15 @@ export const GameBoard = ({ level, recipe, levelData }) => {
     setSelectedIngredient(ingredient);
   };
   
-  const handleIngredientDrop = (isCorrect) => {
-    if (isCorrect) {
-      // Correct answer
-      setGameMessage("כל הכבוד! 🎉");
-      
+  const handleIngredientDrop = (e) => {
+    // Check if there's a selected ingredient and if it's the correct one
+    if (selectedIngredient) {
+      const isCorrect = selectedIngredient.isCorrect;
+
+      if (isCorrect) {
+        // Correct answer
+        setGameMessage("כל הכבוד! 🎉");
+  
       // Update progress
       const newProgress = Math.round(((currentIngredientIndex + 1) / recipe.ingredients.length) * 100);
       setProgress(newProgress);
@@ -160,15 +164,15 @@ export const GameBoard = ({ level, recipe, levelData }) => {
         }, 1000);
       }
     } else {
-      // Wrong answer
-      setGameMessage("זה לא מה שאנחנו מחפשים, בוא ננסה שוב! 😊");
-      
-      setTimeout(() => {
-        setGameMessage(`בואו נכין ${recipe.name}! מצא את ${currentIngredient.name}`);
-      }, 1500);
+        // Wrong answer
+        setGameMessage("זה לא מה שאנחנו מחפשים, בוא ננסה שוב! 😊");
+        
+        setTimeout(() => {
+          setGameMessage(`בואו נכין ${recipe.name}! מצא את ${currentIngredient.name}`);
+        }, 1500);
+      }
+      setSelectedIngredient(null); // Clear selected ingredient after a drop attempt
     }
-    
-    setSelectedIngredient(null);
   };
   
   return (
@@ -184,9 +188,13 @@ export const GameBoard = ({ level, recipe, levelData }) => {
           </GameMessage>
           
           <div className="top-area">
-            <Chef isDragging={!!selectedIngredient} isCorrect={selectedIngredient?.isCorrect} />
+            <Chef 
+              isDragging={!!selectedIngredient} 
+              isCorrect={selectedIngredient?.isCorrect} 
+            />
             <Pot 
-              onDrop={() => selectedIngredient && handleIngredientDrop(selectedIngredient.isCorrect)} 
+              onDrop={handleIngredientDrop} 
+              selectedIngredient={selectedIngredient} 
             />
           </div>
           
@@ -210,6 +218,8 @@ export const GameBoard = ({ level, recipe, levelData }) => {
             key={index}
             ingredient={ingredient}
             onSelect={handleIngredientSelect}
+
+            onDragEnd={handleIngredientDrop} // Pass the new handler
             isSelected={selectedIngredient === ingredient}
           />
         ))}

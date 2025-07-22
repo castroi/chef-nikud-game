@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -7,9 +7,10 @@ const IngredientContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: grab; /* Change cursor to indicate draggability */
   position: relative;
   user-select: none;
+  z-index: 10; /* Ensure draggable ingredient is above other elements */
 `;
 
 const IngredientImage = styled(motion.div)`
@@ -37,30 +38,35 @@ const IngredientName = styled.div`
   color: #333;
 `;
 
-export const Ingredient = ({ ingredient, onSelect, isSelected }) => {
+export const Ingredient = ({ ingredient, onSelect, onDragEnd, isSelected }) => {
   const controls = useAnimation();
-  
-  const handleClick = () => {
-    // If ingredient is already selected, do nothing
-    if (isSelected) return;
-    
-    // Activate "lifting" animation
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Reset ingredient position if it was selected and then unselected
+    if (!isSelected) {
+      controls.start({
+        x: 0,
+        y: 0,
+        scale: 1,
+        transition: { duration: 0.2 }
+      });
+    }
+  }, [isSelected, controls]);
+
+  const handleDragStart = () => {
+    // Trigger the onSelect when drag starts, simulating the previous click behavior
+    onSelect(ingredient);
     controls.start({
-      y: -10,
       scale: 1.1,
-      transition: { duration: 0.2 }
-    }).then(() => {
-      onSelect(ingredient);
+      transition: { duration: 0.1 }
     });
   };
-  
-  // Error effect - shake
-  const wrongAnimation = async () => {
-    await controls.start({
-      x: [0, -5, 5, -5, 5, 0],
-      transition: { duration: 0.4 }
-    });
-    await controls.start({ scale: 1, y: 0 });
+
+  const handleDragTransitionEnd = () => {
+    // This is called automatically by framer-motion when drag animation ends
+    // We can use this to signal to the parent that dragging has finished
+    onDragEnd();
   };
   
   // Choose the appropriate emoji for the ingredient
@@ -87,9 +93,17 @@ export const Ingredient = ({ ingredient, onSelect, isSelected }) => {
   
   return (
     <IngredientContainer
+      ref={containerRef}
+      drag
+      dragConstraints={containerRef} /* Constrain drag to its parent (itself in this case, but useful for conceptual understanding) */
+      dragElastic={1} /* Allows a "rubber band" effect when dragging outside constraints */
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragTransitionEnd} /* Use framer-motion's onDragEnd */
       whileHover={{ scale: 1.05 }}
       animate={controls}
-      onClick={handleClick}
+      style={{
+        position: 'relative' // Ensure positioning context for drag
+      }}
     >
       <IngredientImage>
         {getEmoji(ingredient.image)}
