@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Confetti from 'react-confetti';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Chef } from './Chef';
@@ -107,25 +108,52 @@ export const GameBoard = ({ level, recipe, levelData }) => {
   const [gameMessage, setGameMessage] = useState("");
   const [selectedIngredient, setSelectedIngredient] = useState(null);
   const [ingredientOptions, setIngredientOptions] = useState([]);
-  
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize();
+
   const currentIngredient = recipe.ingredients[currentIngredientIndex];
-  
+
   useEffect(() => {
     // Reset state when recipe changes
     setCurrentIngredientIndex(0);
     setProgress(0);
     setGameMessage(`בואו נכין ${recipe.name}! מצא את ${recipe.ingredients[0].name}`);
-    
+    setShowConfetti(false); // Reset confetti
+
     // Create random ingredient options
     generateIngredientOptions();
   }, [recipe]);
-  
+
   useEffect(() => {
     if (currentIngredient) {
       setGameMessage(`בואו נכין ${recipe.name}! מצא את ${currentIngredient.name}`);
       generateIngredientOptions();
     }
   }, [currentIngredientIndex]);
+
+  // Custom hook for window size
+  function useWindowSize() {
+    const [size, setSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      function handleResize() {
+        setSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      window.addEventListener('resize', handleResize);
+      handleResize(); // Set initial size
+
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return size;
+  }
+  
   
   const generateIngredientOptions = () => {
     if (!currentIngredient) return;
@@ -164,9 +192,8 @@ export const GameBoard = ({ level, recipe, levelData }) => {
       
       // Check if we finished the recipe
       if (currentIngredientIndex === recipe.ingredients.length - 1) {
-        setTimeout(() => {
-          setGameMessage("הידד! סיימת להכין את המתכון! 🍲");
-        }, 1000);
+        setGameMessage("הידד! סיימת להכין את המתכון! 🍲");
+        setShowConfetti(true);
       } else {
         // Move to next ingredient
         setTimeout(() => {
@@ -187,6 +214,7 @@ export const GameBoard = ({ level, recipe, levelData }) => {
   
   return (
     <MainLayoutContainer>
+      {showConfetti && <Confetti width={width} height={height} recycle={false} numberOfPieces={500} gravity={0.3} />}
       <GameBoardContainer>
         <KitchenArea>
           <GameMessage
