@@ -29,7 +29,7 @@ const ProgressText = styled.span`
 `;
 
 const StarContainer = styled.div`
-  display: flex;
+  display: hidden;
   justify-content: center;
   margin-top: 10px;
 `;
@@ -56,22 +56,6 @@ export const ProgressBar = ({ progress }) => {
         </ProgressFill>
       </ProgressBarContainer>
       
-      <StarContainer>
-        {[...Array(5)].map((_, index) => (
-          <Star
-            key={index}
-            active={index < starsCount}
-            initial={{ scale: index < starsCount ? 0 : 1 }}
-            animate={{ 
-              scale: index < starsCount ? 1 : 1,
-              rotate: index < starsCount ? [0, 10, -10, 10, 0] : 0
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            ⭐
-          </Star>
-        ))}
-      </StarContainer>
     </div>
   );
 };
